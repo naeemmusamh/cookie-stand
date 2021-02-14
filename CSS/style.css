@@ -1,0 +1,48 @@
+body spam li {
+    display: inline;
+    margin-left: 10%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    text-align: center;
+    color: white;
+}
+
+main h1 {
+    color: red;
+}
+
+body spam img {
+    width: 6%;
+    height: 50%;
+}
+
+body {
+    background-image: url("../iamge/download.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.img1 {
+    width: 20%;
+}
+
+.img2 {
+    width: 20%;
+}
+
+.img3 {
+    width: 20%
+}
+
+footer {
+    text-align: center;
+    background-color: white;
+    color: black;
+}
