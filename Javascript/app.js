@@ -6,7 +6,8 @@ let seattle = {
     name: 'seattle',
     parag: 'parag',
     cust: [],
-    averg: [''],
+    averg: [],
+    total: 0,
 
     cust1: function(max, min) {
         for (let i = 0; i < workbyhour.length; i++) {
@@ -16,7 +17,8 @@ let seattle = {
 
     cust2: function(averg1) {
         for (let i = 0; i < workbyhour.length; i++) {
-            this.averg.push(Math.floor(averg1 * this.cust[0]));
+            this.averg.push(Math.floor(averg1 * this.cust[i]));
+            this.total = this.total + this.averg[i]
         }
     },
 
@@ -30,20 +32,20 @@ let seattle = {
         let header2 = document.createElement('h3');
         articleElement.appendChild(header2);
         header2.textContent = this.name;
-        let paragaph1 = document.createElement('p');
-        articleElement.appendChild(paragaph1);
-        paragaph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
+        let paragraph1 = document.createElement('p');
+        articleElement.appendChild(paragraph1);
+        paragraph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
         let ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement)
 
         for (let i = 0; i < workbyhour.length; i++) {
             let liElement = document.createElement('li');
             ulElement.appendChild(liElement);
-            liElement.textContent = workbyhour[i] + ' ' + this.cust[i];
+            liElement.textContent = workbyhour[i] + ' ' + this.averg[i] + 'cookies';
         }
-        let paragaph2 = document.createElement('p');
-        articleElement.appendChild(paragaph2);
-        paragaph2.textContent = 'Total' + ' ' + this.averg[1];
+        let paragraph2 = document.createElement('p');
+        articleElement.appendChild(paragraph2);
+        paragraph2.textContent = 'Total' + ' : ' + this.total + 'cookies';
     }
 }
 seattle.cust1(23, 65);
@@ -53,10 +55,12 @@ seattle.add();
 
 
 let Tokyo = {
+    header: 'cookies sales by hour for location',
     name: 'Tokyo',
     parag: 'parag',
     cust: [],
-    averg: [''],
+    averg: [],
+    total: 0,
 
     cust1: function(max, min) {
         for (let i = 0; i < workbyhour.length; i++) {
@@ -66,7 +70,8 @@ let Tokyo = {
 
     cust2: function(averg1) {
         for (let i = 0; i < workbyhour.length; i++) {
-            this.averg.push(Math.floor(averg1 * this.cust[0]));
+            this.averg.push(Math.floor(averg1 * this.cust[i]));
+            this.total = this.total + this.averg[i]
         }
     },
 
@@ -74,23 +79,26 @@ let Tokyo = {
         let divElement = document.getElementById('storeinfo');
         let articleElement = document.createElement('article');
         divElement.appendChild(articleElement);
+        let header1 = document.createElement('h1');
+        articleElement.appendChild(header1);
+        header1.textContent = this.header;
         let header2 = document.createElement('h3');
         articleElement.appendChild(header2);
         header2.textContent = this.name;
-        let paragaph1 = document.createElement('p');
-        articleElement.appendChild(paragaph1);
-        paragaph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
+        let paragraph1 = document.createElement('p');
+        articleElement.appendChild(paragraph1);
+        paragraph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
         let ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement)
 
         for (let i = 0; i < workbyhour.length; i++) {
             let liElement = document.createElement('li');
             ulElement.appendChild(liElement);
-            liElement.textContent = workbyhour[i] + ' ' + this.cust[i];
+            liElement.textContent = workbyhour[i] + ' ' + this.averg[i] + 'cookies';
         }
-        let paragaph2 = document.createElement('p');
-        articleElement.appendChild(paragaph2);
-        paragaph2.textContent = 'Total' + ' ' + this.averg[1];
+        let paragraph2 = document.createElement('p');
+        articleElement.appendChild(paragraph2);
+        paragraph2.textContent = 'Total' + ' : ' + this.total + 'cookies';
     }
 }
 Tokyo.cust1(3, 24);
@@ -99,10 +107,12 @@ Tokyo.add();
 // console.log(seattle);
 
 let Dubai = {
+    header: 'cookies sales by hour for location',
     name: 'Dubai',
     parag: 'parag',
     cust: [],
-    averg: [''],
+    averg: [],
+    total: 0,
 
     cust1: function(max, min) {
         for (let i = 0; i < workbyhour.length; i++) {
@@ -112,7 +122,8 @@ let Dubai = {
 
     cust2: function(averg1) {
         for (let i = 0; i < workbyhour.length; i++) {
-            this.averg.push(Math.floor(averg1 * this.cust[0]));
+            this.averg.push(Math.floor(averg1 * this.cust[i]));
+            this.total = this.total + this.averg[i]
         }
     },
 
@@ -120,23 +131,26 @@ let Dubai = {
         let divElement = document.getElementById('storeinfo');
         let articleElement = document.createElement('article');
         divElement.appendChild(articleElement);
+        let header1 = document.createElement('h1');
+        articleElement.appendChild(header1);
+        header1.textContent = this.header;
         let header2 = document.createElement('h3');
         articleElement.appendChild(header2);
         header2.textContent = this.name;
-        let paragaph1 = document.createElement('p');
-        articleElement.appendChild(paragaph1);
-        paragaph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
+        let paragraph1 = document.createElement('p');
+        articleElement.appendChild(paragraph1);
+        paragraph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
         let ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement)
 
         for (let i = 0; i < workbyhour.length; i++) {
             let liElement = document.createElement('li');
             ulElement.appendChild(liElement);
-            liElement.textContent = workbyhour[i] + ' ' + this.cust[i];
+            liElement.textContent = workbyhour[i] + ' ' + this.averg[i] + 'cookies';
         }
-        let paragaph2 = document.createElement('p');
-        articleElement.appendChild(paragaph2);
-        paragaph2.textContent = 'Total' + ' ' + this.averg[1];
+        let paragraph2 = document.createElement('p');
+        articleElement.appendChild(paragraph2);
+        paragraph2.textContent = 'Total' + ' : ' + this.total + 'cookies';
     }
 }
 Dubai.cust1(3, 24);
@@ -145,10 +159,12 @@ Dubai.add();
 // console.log(seattle);
 
 let Paris = {
+    header: 'cookies sales by hour for location',
     name: 'Paris',
     parag: 'parag',
     cust: [],
-    averg: [''],
+    averg: [],
+    total: 0,
 
     cust1: function(max, min) {
         for (let i = 0; i < workbyhour.length; i++) {
@@ -158,7 +174,8 @@ let Paris = {
 
     cust2: function(averg1) {
         for (let i = 0; i < workbyhour.length; i++) {
-            this.averg.push(Math.floor(averg1 * this.cust[0]));
+            this.averg.push(Math.floor(averg1 * this.cust[i]));
+            this.total = this.total + this.averg[i]
         }
     },
 
@@ -166,23 +183,26 @@ let Paris = {
         let divElement = document.getElementById('storeinfo');
         let articleElement = document.createElement('article');
         divElement.appendChild(articleElement);
+        let header1 = document.createElement('h1');
+        articleElement.appendChild(header1);
+        header1.textContent = this.header;
         let header2 = document.createElement('h3');
         articleElement.appendChild(header2);
         header2.textContent = this.name;
-        let paragaph1 = document.createElement('p');
-        articleElement.appendChild(paragaph1);
-        paragaph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
+        let paragraph1 = document.createElement('p');
+        articleElement.appendChild(paragraph1);
+        paragraph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
         let ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement)
 
         for (let i = 0; i < workbyhour.length; i++) {
             let liElement = document.createElement('li');
             ulElement.appendChild(liElement);
-            liElement.textContent = workbyhour[i] + ' ' + this.cust[i];
+            liElement.textContent = workbyhour[i] + ' ' + this.averg[i] + 'cookies';
         }
-        let paragaph2 = document.createElement('p');
-        articleElement.appendChild(paragaph2);
-        paragaph2.textContent = 'Total' + ' ' + this.averg[1];
+        let paragraph2 = document.createElement('p');
+        articleElement.appendChild(paragraph2);
+        paragraph2.textContent = 'Total' + ' : ' + this.total + 'cookies';
     }
 }
 Paris.cust1(20, 38);
@@ -191,10 +211,12 @@ Paris.add();
 // console.log(seattle);
 
 let Lima = {
+    header: 'cookies sales by hour for location',
     name: 'Lima',
     parag: 'parag',
     cust: [],
-    averg: [''],
+    averg: [],
+    total: 0,
 
     cust1: function(max, min) {
         for (let i = 0; i < workbyhour.length; i++) {
@@ -204,7 +226,8 @@ let Lima = {
 
     cust2: function(averg1) {
         for (let i = 0; i < workbyhour.length; i++) {
-            this.averg.push(Math.floor(averg1 * this.cust[0]));
+            this.averg.push(Math.floor(averg1 * this.cust[i]));
+            this.total = this.total + this.averg[i]
         }
     },
 
@@ -212,26 +235,29 @@ let Lima = {
         let divElement = document.getElementById('storeinfo');
         let articleElement = document.createElement('article');
         divElement.appendChild(articleElement);
+        let header1 = document.createElement('h1');
+        articleElement.appendChild(header1);
+        header1.textContent = this.header;
         let header2 = document.createElement('h3');
         articleElement.appendChild(header2);
         header2.textContent = this.name;
-        let paragaph1 = document.createElement('p');
-        articleElement.appendChild(paragaph1);
-        paragaph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
+        let paragraph1 = document.createElement('p');
+        articleElement.appendChild(paragraph1);
+        paragraph1.textContent = '-------' + 'hour' + '------' + 'number cookies';
         let ulElement = document.createElement('ul');
         articleElement.appendChild(ulElement)
 
         for (let i = 0; i < workbyhour.length; i++) {
             let liElement = document.createElement('li');
             ulElement.appendChild(liElement);
-            liElement.textContent = workbyhour[i] + ' ' + this.cust[i];
+            liElement.textContent = workbyhour[i] + ' ' + this.averg[i] + 'cookies';
         }
-        let paragaph2 = document.createElement('p');
-        articleElement.appendChild(paragaph2);
-        paragaph2.textContent = 'Total' + ' ' + this.averg[1];
+        let paragraph2 = document.createElement('p');
+        articleElement.appendChild(paragraph2);
+        paragraph2.textContent = 'Total' + ' : ' + this.total + 'cookies';
     }
 }
-Lima.cust1(2, 16);
-Lima.cust2(4.6);
+Lima.cust1(23, 65);
+Lima.cust2(6.3);
 Lima.add();
 // console.log(seattle);
