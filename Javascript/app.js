@@ -1,8 +1,8 @@
 'use strict';
-let newarray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let newArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function randomValue(min, max) {
-    return Math.ceil(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+    return Math.ceil(Math.random() * (max - min + 1) + min);
 }
 
 let divElement = document.getElementById('storeinfo');
@@ -19,10 +19,11 @@ function SlamonCookies(name, min, max, averg) {
     this.totalbyHour1 = [];
     this.total1 = new Array();
     this.total = 0;
+    this.total2 = 0;
 }
 
 
-SlamonCookies.prototype.headerhour = function() {
+SlamonCookies.prototype.headerHour = function() {
     this.workbyHour = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12AM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 }
 
@@ -36,11 +37,8 @@ SlamonCookies.prototype.cusmerbyHour = function() {
 
 SlamonCookies.prototype.totalbyHour = function() {
     for (let i = 0; i < this.workbyHour.length; i++) {
-        newarray[i] = newarray[i] + this.total1[i];
-        // console.log('total ( ' + i + ' ): ' + newarray[i] + ' cookie: ' + this.total[i]);
+        newArray[i] = newArray[i] + this.total1[i];
     }
-    newarray[newarray.lenght] = this.total + this.total1;
-    // console.log(this.total1);
 }
 
 // SlamonCookies.prototype.cusmerbyHour = function() {
@@ -95,39 +93,38 @@ SlamonCookies.prototype.footer = function() {
     let tdElement = document.createElement('th');
     trElement.appendChild(tdElement);
     tdElement.textContent = 'total';
-    for (let i = 0; i < newarray.length; i++) {
+    for (let i = 0; i < newArray.length; i++) {
         let tdElement = document.createElement('th');
         trElement.appendChild(tdElement);
-        tdElement.textContent = newarray[i];
+        tdElement.textContent = newArray[i];
     }
-    trElement.appendChild(tdElement);
-    tdElement.textContent = this.averg;
+
 }
 
 let Seattle = new SlamonCookies('Seattle', 23, 65, 6.3);
-Seattle.headerhour();
+Seattle.headerHour();
 Seattle.cusmerbyHour();
 Seattle.totalbyHour();
 Seattle.body();
 Seattle.row();
 // console.log(Seattle);
 let Tokyo = new SlamonCookies('Tokyo', 3, 24, 1.2);
-Tokyo.headerhour();
+Tokyo.headerHour();
 Tokyo.cusmerbyHour();
 Tokyo.totalbyHour();
 Tokyo.row();
 let Dubai = new SlamonCookies('Dubai', 1, 38, 3.7);
-Dubai.headerhour();
+Dubai.headerHour();
 Dubai.cusmerbyHour();
 Dubai.totalbyHour();
 Dubai.row();
 let Paris = new SlamonCookies('Paris', 20, 38, 2.3);
-Paris.headerhour();
+Paris.headerHour();
 Paris.cusmerbyHour();
 Paris.totalbyHour();
 Paris.row();
 let Lima = new SlamonCookies('Lima', 2, 16, 4.6);
-Lima.headerhour();
+Lima.headerHour();
 Lima.cusmerbyHour();
 Lima.totalbyHour();
 Lima.row();
