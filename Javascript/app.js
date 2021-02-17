@@ -128,4 +128,19 @@ Lima.headerHour();
 Lima.cusmerbyHour();
 Lima.totalbyHour();
 Lima.row();
-Lima.footer();
+
+let form = document.getElementById('user');
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const namefile = event.target.name1.value;
+    // console.log(namefile);
+    const mincont = event.target.number1.value;
+    const maxcont = event.target.number2.value;
+    const averagcont = event.target.number3.value;
+    let inputUser = new SlamonCookies(namefile, mincont, maxcont, averagcont);
+    inputUser.headerHour();
+    inputUser.cusmerbyHour();
+    inputUser.totalbyHour();
+    inputUser.row();
+    inputUser.footer();
+});
