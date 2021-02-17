@@ -1,29 +1,49 @@
-body spam li {
+body span {
+    position: fixed;
+    top: 0%;
+}
+
+body span li {
     display: inline;
     margin-left: 10%;
 }
 
-a {
-    text-decoration: none;
-    color: white;
+.hide {
+    visibility: hidden;
+    max-height: 0;
 }
 
-main {
-    text-align: center;
-    color: white;
+.hide1 {
+    visibility: hidden;
+    max-height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #660033;
 }
 
 main h1 {
-    color: red;
+    color: #603;
 }
 
-body spam img {
+main p {
+    position: relative;
+    left: 290px;
+    text-align: center;
+    width: 460px;
+    color: #306;
+    font-size: large;
+    font-style: italic;
+}
+
+body span img {
     width: 6%;
     height: 50%;
 }
 
 body {
-    background-image: url("../iamge/download.jpg");
+    background-image: url("../iamge/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -31,32 +51,56 @@ body {
 
 .img1 {
     width: 15%;
-    height: 120px;
+    height: 160px;
+    margin-left: 100px;
+    margin-right: 120px;
+    margin-top: 100px;
 }
 
 .img2 {
     width: 15%;
-    height: 120px;
+    height: 150px;
+    margin-right: 170px;
 }
 
 .img3 {
-    width: 15%;
-    height: 120px;
+    width: 25%;
+    height: 160px;
+}
+
+.img4 {
+    width: 25%;
+    height: 160px;
+    margin-left: 300px;
 }
 
 .im1 {
-    width: 100px;
-    float: left;
+    width: 390px;
+    height: 250px;
 }
 
 footer {
-    text-align: center;
-    background-color: white;
-    color: black;
-    float: inline-end;
+    color: white;
 }
 
-.p1 {
-    color: white;
+.p3 {
+    color: #663366;
+    font-style: italic;
     font-size: large;
+    font-style: italic;
+}
+
+.p4 {
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+td,
+th {
+    border: 1px solid #333300;
+    color: #660033;
 }
