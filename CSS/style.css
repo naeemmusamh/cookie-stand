@@ -30,19 +30,33 @@ body {
 }
 
 .img1 {
-    width: 20%;
+    width: 15%;
+    height: 120px;
 }
 
 .img2 {
-    width: 20%;
+    width: 15%;
+    height: 120px;
 }
 
 .img3 {
-    width: 20%
+    width: 15%;
+    height: 120px;
+}
+
+.im1 {
+    width: 100px;
+    float: left;
 }
 
 footer {
     text-align: center;
     background-color: white;
     color: black;
+    float: inline-end;
+}
+
+.p1 {
+    color: white;
+    font-size: large;
 }
