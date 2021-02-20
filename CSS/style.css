@@ -25,6 +25,8 @@ a {
 
 main h1 {
     color: #603;
+    font-family: 'Ballet', cursive;
+    font-family: 'Reggae One', cursive;
 }
 
 main p {
@@ -34,7 +36,10 @@ main p {
     width: 460px;
     color: #306;
     font-size: large;
-    font-style: italic;
+    font-family: 'Ballet', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Reggae One', cursive;
 }
 
 body span img {

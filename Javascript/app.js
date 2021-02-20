@@ -41,23 +41,6 @@ SlamonCookies.prototype.totalbyHour = function() {
     }
 }
 
-// SlamonCookies.prototype.cusmerbyHour = function() {
-//     for (let i = 0; i < this.workbyHour.length; i++) {
-//         this.cusmerbyHour1.push(randomValue(this.max, this.min) * Math.ceil(this.min));
-//         this.cusmerbyHour1[i] = this.cusmerbyHour1[i] + this.total;
-
-//     }
-// }
-
-// SlamonCookies.prototype.totalbyHour = function() {
-//     for (let i = 0; i < this.workbyHour.length; i++) {
-//         this.totalbyHour1.push(Math.floor(this.averg * this.cusmerbyHour1[i]));
-//         this.total = this.total + this.totalbyHour1[i];
-
-//     }
-
-// }
-
 SlamonCookies.prototype.body = function() {
     let trElement = document.createElement('tr');
     table.appendChild(trElement);
